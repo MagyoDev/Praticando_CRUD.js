@@ -1,0 +1,56 @@
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0.5rem;
+}
+
+.container {
+    position: relative;
+    top: 20px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+}
+
+</style>
+
+<div class="nav">
+    <a href="/">Cadastrar</a>
+    <a href="/consultar">Consultar</a>
+</div>
+ {{#each post}}
+        {{#dataValues}}
+<div class="container">
+<form action="/atualizar" method="post">
+    <input type="hidden" name="id" value="{{id}}">
+    <label>Nome:</label>
+    <input type="name" name="nome" value="{{nome}}">
+    <label>Idade:</label>
+    <input type="number" name="idade" value="{{idade}}">
+    <br>
+    <br>
+    <button type="submit">Atualizar</button>
+</div>
+</form>
+{{/dataValues}}
+        {{/each}}

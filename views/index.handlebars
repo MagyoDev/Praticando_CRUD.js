@@ -1,0 +1,52 @@
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0.5rem;
+}
+
+.container {
+    position: relative;
+    top: 20px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+}
+
+</style>
+
+<div class="nav">
+    <a href="/">Cadastrar</a>
+    <a href="/consultar">Consultar</a>
+</div>
+
+<form action="/cadastrar" method="post">
+<div class="container">
+    <label>Nome:</label>
+    <input type="name" name="nome">
+    <label>Idade:</label>
+    <input type="number" name="idade">
+    <br>
+    <br>
+    <button type="submit">Cadastrar</button>
+</div>
+</form>
